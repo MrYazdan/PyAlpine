@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  python:
+    build: ./PyAlpine/
+    container_name: PyAlpine
+    command:
+      - mkdir -p /data &&
+      - cd /data &&
+      - python
+    volumes:
+      - share_volume:/data
+    restart: always
+
+volumes:
+  share_volume:

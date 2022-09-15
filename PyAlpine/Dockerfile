@@ -11,6 +11,8 @@ ENV PYTHONUNBUFFERED 1
 
 COPY . /usr/src/app/
 
+RUN
+
 RUN apk add --no-cache --virtual .build-deps \
 		coreutils \
         ca-certificates openssl-dev \
@@ -18,9 +20,7 @@ RUN apk add --no-cache --virtual .build-deps \
 		gcc clang g++ libc-dev \
 		libedit-dev \
 		libxml2-dev \
-		libxslt-dev \
 		linux-headers \
-		llvm-dev \
 		make \
         musl-dev \
         libffi-dev jpeg-dev zlib-dev \
