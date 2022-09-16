@@ -3,6 +3,13 @@
 
 <br>
 
+### Simple Http Server :
+>`docker-compose --env-file .env.info up` 
+
+
+<br>
+
+
 ### Why Alpine linux ?
 **Small, Simple, Secure** \
 Alpine Linux is a security-oriented, lightweight Linux distribution based on musl libc and busybox.
