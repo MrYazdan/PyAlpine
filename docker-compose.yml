@@ -1,11 +1,7 @@
 version: "3.9"
 services:
   simple_http_server:
-    build:
-      context: ./service
-      args:
-        - PA_PACKAGES=${PA_PACKAGES}
-        - PA_FILENAME=${PA_FILENAME}
-    command: python3 -m http.server -b '0.0.0.0' ${PA_PORT}
+    build: ./service
+    command: python3 -m http.server -b '0.0.0.0' 80
     ports:
-      - "${PA_PORT}:${PA_PORT}"
+      - "4004:80"
