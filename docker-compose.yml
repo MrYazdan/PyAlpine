@@ -2,6 +2,6 @@ version: "3.9"
 services:
   simple_http_server:
     build: ./service
-    command: python3 -m http.server -b '0.0.0.0' 80
+    command: python3 -m http.server -b '0.0.0.0' 4004
     ports:
-      - "4004:80"
+      - "4004:4004"

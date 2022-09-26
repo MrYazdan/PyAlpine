@@ -1,10 +1,14 @@
 # Docker-PyAlpine
-### Template of Python projects [Flask, Django, ...] using Docker on Alpine Linux 😋
+### Template of Python projects using Docker on Alpine Linux
 
 <br>
 
 ### Simple Http Server :
->`docker-compose --env-file .env.info up` 
+>`docker-compose up` 
+ 
+or
+
+> `docker build -t py-alpine services && docker run -p 4004:4004 py-alpine 'python3 http.server -b 127.0.0.1 4004'`
 
 
 <br>
