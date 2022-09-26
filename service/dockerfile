@@ -1,13 +1,7 @@
-FROM python:3.10-alpine3.16
+FROM alpine:3.16
 
 LABEL version="1.0"
 LABEL maintainer="MrYazdan.ir <<mrrezayazdani@yahoo.com>>"
-
-ENV LANG en_US.utf8
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
-
-FROM alpine:3.16
 
 ENV PATH /usr/local/bin:$PATH
 ENV LANG C.UTF-8
@@ -70,5 +64,8 @@ RUN set -eux; \
 	rm -f get-pip.py; \
 	pip install -U pip; \
 	export PYTHON_PIP_VERSION="$(pip -V | cut -d " " -f 2)"
+
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
 
 CMD ["python3"]
